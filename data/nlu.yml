@@ -1,0 +1,122 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hiii
+    - hii
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - are you a bot
+- intent: request_clg
+  examples: |
+    - Show me the engineering colleges under mumbai university
+    - engineering colleges under mumbai university
+    - engineering colleges list
+    - college list
+- intent: request_address
+  examples: |
+    - Where is the [Anjuman-I-Islam's M.H. Saboo Siddik College of Engineering]{"entity": "clg_name"} located
+    - Give me the location of [Fr. Conceicao Rodrigues College of Engineering](clg_name)
+    - where is [Anjuman-I-Islam's M.H. Saboo Siddik College of Engineering]{"entity": "clg_name"}
+    - location of [Anjuman-I-Islam's M.H. Saboo Siddik College of Engineering]{"entity": "clg_name"}
+    - [Anjuman-I-Islam's M.H. Saboo Siddik College of Engineering]{"entity": "clg_name"} located
+    - address of [Anjuman-I-Islam's M.H. Saboo Siddik College of Engineering]{"entity": "clg_name"}
+    - give me the address of [Anjuman-I-Islam's M.H. Saboo Siddik College of Engineering]{"entity": "clg_name"}
+    - what is the address of [Anjuman-I-Islam's M.H. Saboo Siddik College of Engineering]{"entity": "clg_name"}
+    - add of [Anjuman-I-Islam's M.H. Saboo Siddik College of Engineering]{"entity": "clg_name"}
+    - [Anjuman-I-Islam's M.H. Saboo Siddik College of Engineering]{"entity": "clg_name"} add
+    - [Anjuman-I-Islam's M.H. Saboo Siddik College of Engineering]{"entity": "clg_name"} location
+- intent: request_intake
+  examples: |
+    - what is the intake of Anjuman-I-Islam's M.H. Saboo Siddik College of Engineering
+    - show me the intake of [college](clg_name)
+- intent: request_contact
+  examples: |
+    - Provide me a contact details of Anjuman-I-Islam's M.H. Saboo Siddik College of Engineering
+    - show me the contact details of [college](clg_name)
+- intent: request_email
+  examples: |
+    - Provide me the email address of Anjuman-I-Islam's M.H. Saboo Siddik College of Engineering
+    - show me the email address of [college](clg_name)
+
+- intent: details
+  examples: |
+    - How can I get more details about Anjuman-I-Islam's M.H. Saboo Siddik College of Engineering?
