@@ -1,0 +1,105 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- details:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- clg_names:
+    use_entities: true
+- clg_add:
+    use_entities: true
+- clg_contact:
+    use_entities: true
+- clg_email:
+    use_entities: true
+- clg_intake:
+    use_entities: true
+- request_clg:
+    use_entities: true
+- request_address:
+    use_entities: true
+- request_email:
+    use_entities: true
+- request_contact:
+    use_entities: true
+- request_intake:
+    use_entities: true
+entities:
+- clg_name
+slots:
+  clg_name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  location:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  intake:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  contact:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  email:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+responses:
+  utter_how_can_i_help:
+  - text: How can I help?
+  utter_greet:
+  - text: Hey! What can I do for you?
+  utter_details:
+  - text: You can get the more details on this college website https://www.mhssce.ac.in
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+actions:
+- utter_how_can_i_help
+- utter_goodbye
+- action_get_address
+- action_get_contact
+- action_clg_name
+- action_get_email
+- utter_greet
+- utter_details
+- utter_happy
+- utter_cheer_up
+- utter_did_that_help
+- utter_iamabot
+- action_get_intake
+forms: {}
+e2e_actions: []
